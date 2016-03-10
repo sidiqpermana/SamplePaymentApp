@@ -193,8 +193,10 @@ public class CreditCardPaymentActivity extends BaseActivity {
         mProgressDialog.setMessage(getString(R.string.common_message_please_wait));
         mProgressDialog.show();
 
-        Call<CreditCardPayment> postCreditCardPaymentAsync = apiClient.postChargingVeritrans(passengerId, orderId,
-                requestTokenPaymentData.hash, amount,
+        Call<CreditCardPayment> postCreditCardPaymentAsync = apiClient.postChargingVeritrans(passengerId,
+                requestTokenPaymentData.orderId,
+                requestTokenPaymentData.hash,
+                amount,
                 token.getToken_id());
         postCreditCardPaymentAsync.enqueue(new Callback<CreditCardPayment>() {
             @Override
@@ -214,8 +216,12 @@ public class CreditCardPaymentActivity extends BaseActivity {
 
     private void parsingResponse(Response<CreditCardPayment> response) {
         CreditCardPayment res = response.body();
-        if (res.status.equalsIgnoreCase("success")){
-            showPaymentStatusDialog(true);
+        if (res != null){
+            if (res.code == 200){
+                showPaymentStatusDialog(true);
+            }else{
+                showPaymentStatusDialog(false);
+            }
         }else{
             showPaymentStatusDialog(false);
         }
