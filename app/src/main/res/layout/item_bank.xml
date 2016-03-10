@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bank Name"
+        android:id="@+id/tv_bank_name"
+        android:layout_marginBottom="4dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Account No"
+        android:id="@+id/tv_bank_no"
+        android:layout_marginBottom="4dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Branch Name"
+        android:id="@+id/tv_bank_branch"
+        android:layout_marginBottom="4dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bank Holder"
+        android:id="@+id/tv_bank_holder"
+        android:layout_marginBottom="4dp"/>
+</LinearLayout>

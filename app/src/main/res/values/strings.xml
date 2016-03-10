@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SamplePaymentApp</string>
+    <string name="veritrans_ccv_code">CCV</string>
+    <string name="veritrans_expiration">Expired</string>
+    <string name="veritrans_card_no">Card No</string>
+    <string name="veritrans_text">Veritrans Payment. We do not save your credentials</string>
+    <string name="common_message_please_wait">Please wait...</string>
+</resources>
